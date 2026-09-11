@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.PrintRecipeCtrl">
+  <children><TitledPane animated="false" text="Print Recipe" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"><content><BorderPane>
+    <center><ScrollPane fitToWidth="true" fitToHeight="true"><content><TextArea fx:id="textArea" editable="false" wrapText="true"/></content></ScrollPane></center>
+    <bottom><HBox alignment="CENTER" spacing="30"><padding><Insets top="10" right="10" bottom="10" left="10"/></padding><Button fx:id="downloadButton" onAction="#onDownload" text="Download"/><Button fx:id="cancelButton" onAction="#onCancel" text="Cancel"/><Label text="Scale Recipe:"/><TextField fx:id="scalingFactorField" text="1.0" prefWidth="60"/></HBox></bottom>
+  </BorderPane></content></TitledPane></children>
+</AnchorPane>

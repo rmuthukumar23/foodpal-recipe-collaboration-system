@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ShoppingListConfirmationCtrl">
+  <top><BorderPane prefHeight="55.0" style="-fx-background-color: #3B4CCA;"><padding><Insets bottom="10" left="12" right="12" top="10"/></padding><center><Label style="-fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Review Ingredients Before Adding"><font><Font size="18"/></font></Label></center></BorderPane></top>
+  <center><VBox spacing="12"><padding><Insets bottom="14" left="14" right="14" top="14"/></padding><Label style="-fx-font-weight: bold;" text="Ingredients to Add"/><ListView fx:id="toBeAddedList" VBox.vgrow="ALWAYS"/><Separator/><Label style="-fx-font-weight: bold;" text="Edit Selected Item"/><HBox spacing="10"><TextField fx:id="editSelectedField" promptText="Select an item above to edit" HBox.hgrow="ALWAYS"/><Button onAction="#onApplyEdit" text="Apply Changes"/></HBox><Separator/><Label style="-fx-font-weight: bold;" text="Add Extra Item"/><HBox spacing="10"><TextField fx:id="addItemField" promptText="e.g., Sugar 1 kg" HBox.hgrow="ALWAYS"/><Button onAction="#onAddItem" text="Add to List"/></HBox><Button onAction="#onRemoveSelected" text="Remove Selected"/><Separator/><HBox spacing="12"><Button onAction="#onCancel" text="Cancel"/><Region HBox.hgrow="ALWAYS"/><Button onAction="#onAddToShoppingList" text="Add to Shopping List"/></HBox></VBox></center>
+</BorderPane>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="550.0" prefWidth="850.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.NutritionalValueCtrl">
+  <top><HBox alignment="CENTER" prefHeight="55.0" style="-fx-background-color: #3B4CCA;"><Label style="-fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Nutritional Values"><font><Font size="22.0"/></font></Label></HBox></top>
+  <center><SplitPane dividerPositions="0.32"><items>
+    <VBox prefWidth="240.0" spacing="12.0" style="-fx-background-color: #F5F5F5;"><padding><Insets bottom="14" left="14" right="14" top="14"/></padding><Label style="-fx-font-weight: bold;" text="Search Ingredients"/><TextField fx:id="searchField" promptText="Type to search..."/><ListView fx:id="ingredientsList" VBox.vgrow="ALWAYS"/><HBox spacing="10"><Button onAction="#onAddGlobalIngredient" text="+"/><Button onAction="#onDeleteGlobalIngredient" text="-"/><Region HBox.hgrow="ALWAYS"/><Button onAction="#onRefresh" text="⟳"/></HBox></VBox>
+    <VBox spacing="15" style="-fx-background-color: #FFFFFF;"><padding><Insets bottom="20" left="25" right="25" top="20"/></padding><Label text="Ingredient Name"/><TextField fx:id="nameField"/><Separator/><GridPane hgap="10" vgap="14"><Label text="Calories" GridPane.rowIndex="0"/><TextField fx:id="caloriesField" GridPane.columnIndex="1" GridPane.rowIndex="0"/><Label text="Protein" GridPane.rowIndex="1"/><TextField fx:id="proteinField" GridPane.columnIndex="1" GridPane.rowIndex="1"/><Label text="Carbohydrates" GridPane.rowIndex="2"/><TextField fx:id="carbsField" GridPane.columnIndex="1" GridPane.rowIndex="2"/><Label text="Fat" GridPane.rowIndex="3"/><TextField fx:id="fatField" GridPane.columnIndex="1" GridPane.rowIndex="3"/></GridPane><Region VBox.vgrow="ALWAYS"/><HBox spacing="15"><Label text="Used in"/><TextField fx:id="recipeCountField" editable="false" prefWidth="50"/><Label text="recipes"/><Region HBox.hgrow="ALWAYS"/><Button onAction="#showRecipes" text="← Back to Recipes"/></HBox></VBox>
+  </items></SplitPane></center>
+</BorderPane>

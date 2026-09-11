@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AdvancedSearchCtrl">
+    <top><BorderPane prefHeight="55.0" style="-fx-background-color: #3B4CCA;"><center><Label style="-fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Advanced Search 🔍" BorderPane.alignment="CENTER"><font><Font size="22.0" /></font></Label></center><left><Button mnemonicParsing="false" onAction="#onCancel" text="← Back" BorderPane.alignment="CENTER" style="-fx-background-color: #FFFFFF; -fx-border-color: #3B4CCA; -fx-border-radius: 6; -fx-background-radius: 6; -fx-text-fill: #3B4CCA;"><BorderPane.margin><Insets left="15.0" /></BorderPane.margin></Button></left></BorderPane></top>
+    <center><ScrollPane fitToWidth="true" style="-fx-background-color: #FFFFFF;"><content><VBox spacing="20.0" style="-fx-background-color: #FFFFFF;"><padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0" /></padding><children>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Cuisine Type"/><FlowPane fx:id="cuisineFlowPane" hgap="10.0" vgap="10.0"><CheckBox text="Italian"/><CheckBox text="Chinese"/><CheckBox text="Mexican"/><CheckBox text="Indian"/><CheckBox text="Japanese"/><CheckBox text="French"/><CheckBox text="Thai"/><CheckBox text="Greek"/><CheckBox text="American"/><CheckBox text="Mediterranean"/></FlowPane></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Protein"/><FlowPane fx:id="proteinFlowPane" hgap="10.0" vgap="10.0"><CheckBox text="Chicken"/><CheckBox text="Beef"/><CheckBox text="Pork"/><CheckBox text="Fish"/><CheckBox text="Seafood"/><CheckBox text="Tofu"/><CheckBox text="Eggs"/><CheckBox text="None (Vegetarian)"/></FlowPane></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Dietary Restrictions"/><FlowPane fx:id="dietaryFlowPane" hgap="10.0" vgap="10.0"><CheckBox text="Vegetarian"/><CheckBox text="Vegan"/><CheckBox text="Gluten-Free"/><CheckBox text="Dairy-Free"/><CheckBox text="Nut-Free"/><CheckBox text="Keto"/><CheckBox text="Low-Carb"/><CheckBox text="Halal"/><CheckBox text="Kosher"/></FlowPane></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Meal Type"/><FlowPane fx:id="mealTypeFlowPane" hgap="10.0" vgap="10.0"><CheckBox text="Breakfast"/><CheckBox text="Brunch"/><CheckBox text="Lunch"/><CheckBox text="Dinner"/><CheckBox text="Snack"/><CheckBox text="Dessert"/><CheckBox text="Appetizer"/></FlowPane></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Language"/><FlowPane fx:id="languageFlowPane" hgap="10.0" vgap="10.0"><CheckBox text="Dutch"/><CheckBox text="English"/><CheckBox text="German"/></FlowPane></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Maximum Cooking Time"/><VBox spacing="5.0"><Label fx:id="maxTimeLabel" text="No limit" style="-fx-text-fill: #3B4CCA; -fx-font-weight: bold;"/><Slider fx:id="maxTimeSlider" min="0" max="240" value="0" majorTickUnit="60" minorTickCount="5" showTickMarks="true" showTickLabels="true"/><Label text="0 = No limit | Range: 0-240 minutes" style="-fx-text-fill: #666666; -fx-font-size: 11px;"/></VBox></VBox>
+        <Separator/>
+        <VBox spacing="10.0"><Label style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Search by Keyword"/><TextField fx:id="keywordField" promptText="Search by name, ingredient, or step..." style="-fx-border-color: #3B4CCA; -fx-border-radius: 6; -fx-background-radius: 6;"/></VBox>
+    </children></VBox></content></ScrollPane></center>
+    <bottom><HBox alignment="CENTER" spacing="15.0" style="-fx-background-color: #F5F5F5;"><padding><Insets bottom="15.0" left="15.0" right="15.0" top="15.0" /></padding><Button mnemonicParsing="false" onAction="#onClearAll" prefWidth="100.0" text="Clear All"/><Button mnemonicParsing="false" onAction="#onSearch" prefWidth="100.0" text="Search" style="-fx-background-color: #3B4CCA; -fx-text-fill: #FFFFFF;"/></HBox></bottom>
+</BorderPane>

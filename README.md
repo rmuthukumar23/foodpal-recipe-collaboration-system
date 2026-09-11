@@ -1,5 +1,7 @@
 # FoodPal
 
+[![CI](https://github.com/rmuthukumar23/foodpal-recipe-collaboration-system/actions/workflows/build.yml/badge.svg)](https://github.com/rmuthukumar23/foodpal-recipe-collaboration-system/actions/workflows/build.yml)
+
 FoodPal is a multi-client recipe manager built as a team software engineering project at TU Delft. It combines a JavaFX desktop client with a Spring Boot server so multiple clients can work with the same recipe library and receive live updates when recipes change.
 
 I worked mainly on the client side and feature integration, including the shopping-list flow, labels and filtering, timer functionality, WebSocket-driven refresh behaviour, favorites handling, UI fixes, and tests.

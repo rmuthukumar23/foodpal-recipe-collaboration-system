@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.HomePageCtrl">
+    <top><BorderPane prefHeight="55.0" style="-fx-background-color: #3B4CCA;">
+        <center><Label style="-fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="%app.title" BorderPane.alignment="CENTER"><font><Font size="22.0" /></font></Label></center>
+        <right><HBox alignment="CENTER_RIGHT" spacing="10.0"><padding><Insets bottom="8.0" left="8.0" right="12.0" top="8.0" /></padding><children>
+            <Button fx:id="timerButton" onAction="#onOpenTimer" prefHeight="35.0" prefWidth="50.0" text="%button.timer" />
+            <Button fx:id="refreshButton" onAction="#handleRefresh" prefHeight="35.0" prefWidth="50.0" text="%button.refresh" />
+            <Button fx:id="shoppingListButton" onAction="#onOpenShoppingList" prefHeight="35.0" prefWidth="55.0" text="🛒" />
+            <MenuButton fx:id="languageMenu" focusTraversable="false" prefHeight="35.0" prefWidth="55.0"><items><MenuItem text="English" onAction="#onEnglish"/><MenuItem text="Nederlands" onAction="#onDutch"/><MenuItem text="Deutsch" onAction="#onGerman"/></items></MenuButton>
+        </children></HBox></right>
+        <left><Button onAction="#onShowNutritionalValue" text="%button.nutrition" BorderPane.alignment="CENTER"><BorderPane.margin><Insets left="15.0" /></BorderPane.margin></Button></left>
+    </BorderPane></top>
+    <center><SplitPane dividerPositions="0.28"><items>
+        <VBox prefWidth="240.0" spacing="12.0" style="-fx-background-color: #F5F5F5;"><padding><Insets bottom="14.0" left="14.0" right="14.0" top="14.0" /></padding><children>
+            <Label style="-fx-font-weight: bold;" text="%label.recipes"><font><Font size="16.0" /></font></Label>
+            <HBox spacing="6.0"><TextField fx:id="searchField" onAction="#handleSearch" promptText="%prompt.search" HBox.hgrow="ALWAYS"/><Button fx:id="searchButton" onAction="#handleSearch" text="%button.search"/></HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0"><Button onAction="#onAdvancedSearch" text="%button.filter"/><CheckBox fx:id="filterFavoritesCheckBox" text="%checkbox.favorites"/></HBox>
+            <ListView fx:id="recipeListView" VBox.vgrow="ALWAYS" />
+            <BorderPane><left><HBox spacing="10.0"><Button fx:id="addRecipeButton" onAction="#onAddRecipe" text="%button.add"/><Button fx:id="removeRecipeButton" onAction="#onRemoveRecipe" text="%button.remove"/></HBox></left><right><HBox spacing="10.0"><Button fx:id="cloneRecipeButton" onAction="#onCloneRecipe" text="📋"/><Button fx:id="printButton" onAction="#onPrintRecipe" text="🖨"/></HBox></right></BorderPane>
+        </children></VBox>
+        <VBox spacing="12.0" style="-fx-background-color: #FFFFFF;"><padding><Insets bottom="14.0" left="14.0" right="14.0" top="14.0" /></padding><children>
+            <HBox alignment="BOTTOM_LEFT" spacing="10.0"><Label fx:id="recipeTitleLabel" style="-fx-font-weight: bold;"><font><Font size="24.0"/></font></Label><Region HBox.hgrow="ALWAYS"/><Button fx:id="makeFavoriteButton" text="%button.favorites"/><Button fx:id="editRecipeTitleButton1" onAction="#onEditName" text="%button.edit"/></HBox>
+            <ScrollPane fitToHeight="true"><content><FlowPane fx:id="labelsFlowPane" hgap="6.0" vgap="6.0"/></content></ScrollPane>
+            <Separator/>
+            <Label style="-fx-font-weight: bold;" text="%label.ingredients"/>
+            <ListView fx:id="ingredientsListView" prefHeight="150.0"/>
+            <HBox><Button fx:id="editIngredientsButton" onAction="#onEditIngredients" text="%button.edit"/></HBox>
+            <Label style="-fx-font-weight: bold;" text="%label.preparation"/>
+            <ListView fx:id="preparationListView" prefHeight="150.0"/>
+            <HBox><Button fx:id="addStepButton" onAction="#onAddStep" text="%button.edit"/></HBox>
+        </children></VBox>
+    </items></SplitPane></center>
+</BorderPane>

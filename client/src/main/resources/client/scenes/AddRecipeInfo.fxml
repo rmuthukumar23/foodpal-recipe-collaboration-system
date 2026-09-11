@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane prefHeight="500.0" prefWidth="650.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AddRecipeInfoCtrl">
+  <top><HBox alignment="CENTER" prefHeight="50.0" style="-fx-background-color: #3B4CCA;"><Label text="Format Rules" style="-fx-text-fill: #FFFFFF;"><font><Font name="System Bold" size="24.0" /></font></Label></HBox></top>
+  <center><ScrollPane fitToWidth="true"><content><VBox spacing="8.0"><padding><Insets top="10" right="10" bottom="10" left="10" /></padding><children>
+    <TitledPane expanded="true" text="Recipe Name"><content><VBox spacing="6"><Label text="Recipe name cannot be empty."/><Label text="Recipe name must be unique."/></VBox></content></TitledPane>
+    <TitledPane text="Ingredients"><content><VBox spacing="6"><Label text="Add at least one ingredient."/><Label text="Formal amounts use a value and unit. Informal amounts can be entered as text."/></VBox></content></TitledPane>
+    <TitledPane text="Preparation Steps"><content><VBox spacing="6"><Label text="Number steps sequentially using 1), 2), 3) and put the instruction on the next line."/></VBox></content></TitledPane>
+    <TitledPane text="Additional Details"><content><VBox spacing="6"><Label text="Language is required. Other labels are optional."/></VBox></content></TitledPane>
+  </children></VBox></content></ScrollPane></center>
+  <bottom><ButtonBar><buttons><Button fx:id="understoodButton" text="Understood" style="-fx-background-color: #3B4CCA; -fx-text-fill: #FFFFFF;" /></buttons></ButtonBar></bottom>
+</BorderPane>
